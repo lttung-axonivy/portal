@@ -100,7 +100,7 @@ HowTo: Add an external link
 
 #. For the :guilabel:`Icon`, change the best icon for it.
 
-#. For the :guilabel:`Image`, upload a image for the process.
+#. For the :guilabel:`Image`, upload a image for the process. Allowed file extensions: png, jpg, jpeg, svg.
 
 #. Confirm your configuration with the button :guilabel:`Add`.
 

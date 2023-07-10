@@ -226,8 +226,9 @@ You can select the chart to be displayed.
 Welcome widget
 ==============
 
-You can define a welcome widget with a background image and a welcome text.
+- You can define a welcome widget with a background image and a welcome text.
 
+- For the :guilabel:`Image`, upload a image for the widget. Allowed file extensions: png, jpg, jpeg, svg.
 |welcome-widget-configuration|
 
 
