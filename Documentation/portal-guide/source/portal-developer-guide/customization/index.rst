@@ -26,6 +26,8 @@ You find ``portal-developer-examples`` in the engine demo mode or import them in
    hide-technical-stuffs
    business-details-page
    document-processes
+   global-footer-info
+   page-header-footer
    process-image
 
 .. |engine-demo-mode| image:: images/customization/engine-demo-mode.png
