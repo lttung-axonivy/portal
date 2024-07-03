@@ -213,6 +213,12 @@ public class CaseDetailsPage extends TemplatePage {
     return $("div[id$=':share-case-details-dialog']");
   }
 
+  public void clickShowOnlyOpenTasks() {
+
+    $("div[id$=':show-only-open-tasks'] .ui-chkbox-box")
+        .shouldBe(getClickableCondition(), DEFAULT_TIMEOUT).click();
+  }
+
   public SelenideElement getGeneralInforBox() {
     return $("[id$='case-detail-general-container']").shouldBe(Condition.appear, DEFAULT_TIMEOUT);
   }
