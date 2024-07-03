@@ -232,6 +232,7 @@ ch.ivy.addon.portalkit.ui.jsf:
     embedInFrame: Start a process/task in IFrame mode
     emptySupportedLanguages: No additional languages are supported
     globalVariableNote:
+      ApplicationName: The default application name that will be displayed on the page title.
       DefaultThemeMode: The default theme mode of the application
       EnableSwitchThemeModeButton: Set to true to enable the switch theme button.
       RoleDirectChildrenLimit: 'The set number controls the amount of direct children roles that is shown in Role Management tab. Valid number: 10, 50, 100'
@@ -1050,6 +1051,7 @@ ch.ivy.addon.portalkit.ui.jsf:
   logoutSetting:
     logout: Logout
   noteHistory:
+    ShowOnlyOpenTasks: Show only open tasks
     author: Author
     caseExportedFileNamePrefix: Note_history_of_case_{0}
     caseHistoriesTitle: Histories
