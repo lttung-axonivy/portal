@@ -99,7 +99,8 @@ public class CaseDetailsPage extends TemplatePage {
   }
 
   public void gotoTaskDetailsPageOfRelatedTask(String taskName) {
-    $$("div[id='case-details-related-task-table'] table tbody tr td span").filter(text(taskName)).first().click();
+    $$("div[id$='case-details-related-task-table'] table tbody tr td span")
+        .filter(text(taskName)).first().click();
   }
 
   public void gotoCaseDetailsPageOfRelatedCase(String caseName) {
@@ -118,8 +119,10 @@ public class CaseDetailsPage extends TemplatePage {
 
   public void openTaskWithRunTheTaskBehaviour(String taskName) {
     getRelatedTasksPanel().shouldBe(appear, DEFAULT_TIMEOUT);
-    var taskItem = $$("div[id='case-details-related-task-table'] table tbody tr td span.task-name-value")
-        .filter(text(taskName)).first().shouldBe(getClickableCondition(), DEFAULT_TIMEOUT);
+    var taskItem = $$(
+        "div[id$='case-details-related-task-table'] table tbody tr td span.task-name-value")
+        .filter(text(taskName)).first()
+      .shouldBe(getClickableCondition(), DEFAULT_TIMEOUT);
     waitUntilElementToBeClickable(taskItem);
     waitUntilElementToBeClickable(taskItem.parent());
     taskItem.parent().click();
@@ -127,15 +130,16 @@ public class CaseDetailsPage extends TemplatePage {
 
   public SelenideElement getNameOfRelatedTask(int index) {
     getRelatedTasksPanel().shouldBe(appear, DEFAULT_TIMEOUT);
-    return $("div[id='case-details-related-task-table'] table tbody").shouldBe(appear, DEFAULT_TIMEOUT).$$("tr")
-        .get(index).$$("td").findBy(Condition.attributeMatching("class", ".*related-task-name-column.*")).$("span");
+    return $("div[id$='case-details-related-task-table'] table tbody")
+        .shouldBe(appear, DEFAULT_TIMEOUT).$$("tr").get(index).$$("td")
+        .findBy(Condition.attributeMatching("class", ".*related-task-name-column.*")).$("span");
   }
 
   public SelenideElement getStateOfRelatedTask(int index) {
     getRelatedTasksPanel().shouldBe(appear, DEFAULT_TIMEOUT);
-    return $("div[id='case-details-related-task-table'] table tbody").shouldBe(appear, DEFAULT_TIMEOUT).$$("tr")
-        .get(index).$$("td").findBy(Condition.attributeMatching("class", ".*related-task-state-column.*"))
-        .$("span span");
+    return $("div[id$='case-details-related-task-table'] table tbody")
+        .shouldBe(appear, DEFAULT_TIMEOUT).$$("tr").get(index).$$("td")
+        .findBy(Condition.attributeMatching("class", ".*related-task-state-column.*")).$("span span");
   }
 
   public void clickRelatedTaskActionButton(int index) {
